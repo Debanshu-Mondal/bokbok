@@ -1,0 +1,27 @@
+databases:
+  - name: bokbok-db
+    plan: free
+    databaseName: bokbok
+    user: bokbok
+
+services:
+  - type: web
+    name: bokbok
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bokbok-db
+          property: connectionString
+      - key: CLIENT_URL
+        value: https://bokbok.onrender.com
