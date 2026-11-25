@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: process.env.CLIENT_URL || "http://localhost:5173",
+        origin: process.env.CLIENT_URL || true,
         credentials: true
     }
 });
@@ -29,7 +29,7 @@ io.use((socket, next) => {
             return next(new Error("Authentication error: no token provided"));
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || "bokbok-dev-secret");
         socket.userId = decoded.userId;
         next();
     } catch (error) {

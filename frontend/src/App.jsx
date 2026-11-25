@@ -12,7 +12,7 @@ function App() {
     if (isCheckingAuth) {
         return (
             <div className="boot-screen">
-                <PixelLoader label="waking the coop" />
+                <PixelLoader label="starting the chatter" />
             </div>
         );
     }

@@ -86,7 +86,7 @@ export default function ChatContainer({ selectedUser, onNewestMessage, onBack })
             </header>
 
             <div className="chat-messages">
-                {isLoading && <PixelLoader label="fetching clucks" />}
+                {isLoading && <PixelLoader label="fetching chatter" />}
 
                 {!isLoading && messages.length === 0 && (
                     <p className="chat-empty-hint">no messages yet — say hi!</p>

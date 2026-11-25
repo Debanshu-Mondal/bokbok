@@ -15,7 +15,7 @@ const protectRoute = (req, res, next) => {
     try {
         const decoded = jwt.verify(
             token,
-            process.env.JWT_SECRET
+            process.env.JWT_SECRET || "bokbok-dev-secret"
         );
 
         req.userId = decoded.userId;

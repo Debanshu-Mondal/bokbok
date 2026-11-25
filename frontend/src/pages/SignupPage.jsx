@@ -31,7 +31,7 @@ export default function SignupPage() {
 
                 <div className="auth-card-body">
                     <h1 className="brand-title">bokbok</h1>
-                    <p className="brand-tagline">hatch a new account</p>
+                    <p className="brand-tagline">pull up a chair &amp; start talking</p>
 
                     <form onSubmit={handleSubmit} className="pixel-form">
                         <label className="pixel-field">
@@ -41,7 +41,7 @@ export default function SignupPage() {
                                 name="username"
                                 value={form.username}
                                 onChange={handleChange}
-                                placeholder="littlehen"
+                                placeholder="chatterbox"
                                 minLength={3}
                                 maxLength={20}
                                 required
@@ -56,7 +56,7 @@ export default function SignupPage() {
                                 name="email"
                                 value={form.email}
                                 onChange={handleChange}
-                                placeholder="hen@coop.com"
+                                placeholder="you@bokbok.chat"
                                 required
                                 autoComplete="email"
                             />
@@ -79,12 +79,12 @@ export default function SignupPage() {
                         {authError && <p className="pixel-error">! {authError}</p>}
 
                         <button type="submit" className="pixel-btn pixel-btn-primary" disabled={isSubmitting}>
-                            {isSubmitting ? "hatching…" : "sign up"}
+                            {isSubmitting ? "creating…" : "sign up"}
                         </button>
                     </form>
 
                     <p className="auth-switch">
-                        already have a nest? <Link to="/login">log in</Link>
+                        already have an account? <Link to="/login">log in</Link>
                     </p>
                 </div>
             </div>

@@ -1,14 +1,14 @@
 /* ---------------------------------------------------------------------
-   bokbok — retro pixel coop theme
+   bokbok — retro pixel chatter theme
 
-   Palette (barnyard-at-dawn):
-     --bok-cream : #FFF3D6  coop wall / parchment background
-     --bok-ink   : #241608  deep wood shadow, primary text
+   Palette (warm-parchment):
+     --bok-cream : #FFF3D6  parchment background
+     --bok-ink   : #241608  deep ink shadow, primary text
      --bok-brown : #4A2E1E  wood brown, borders
-     --bok-red   : #E8543A  comb red, primary accent
-     --bok-yellow: #FFC53D  beak yellow, secondary accent
-     --bok-sky   : #7EC8E3  dawn sky blue, info / links
-     --bok-green : #5B8C3A  grass green, online / success
+     --bok-red   : #E8543A  terracotta red, primary accent
+     --bok-yellow: #FFC53D  warm gold, secondary accent
+     --bok-sky   : #7EC8E3  sky blue, info / links
+     --bok-green : #5B8C3A  moss green, online / success
    ------------------------------------------------------------------- */
 
 :root {

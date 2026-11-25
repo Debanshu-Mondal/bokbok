@@ -31,7 +31,7 @@ export default function LoginPage() {
 
                 <div className="auth-card-body">
                     <h1 className="brand-title">bokbok</h1>
-                    <p className="brand-tagline">a tiny coop to cluck at your friends</p>
+                    <p className="brand-tagline">a tiny room to chatter with your friends</p>
 
                     <form onSubmit={handleSubmit} className="pixel-form">
                         <label className="pixel-field">
@@ -41,7 +41,7 @@ export default function LoginPage() {
                                 name="email"
                                 value={form.email}
                                 onChange={handleChange}
-                                placeholder="hen@coop.com"
+                                placeholder="you@bokbok.chat"
                                 required
                                 autoComplete="email"
                             />
@@ -63,12 +63,12 @@ export default function LoginPage() {
                         {authError && <p className="pixel-error">! {authError}</p>}
 
                         <button type="submit" className="pixel-btn pixel-btn-primary" disabled={isSubmitting}>
-                            {isSubmitting ? "clucking in…" : "log in"}
+                            {isSubmitting ? "joining…" : "log in"}
                         </button>
                     </form>
 
                     <p className="auth-switch">
-                        new to the coop? <Link to="/signup">hatch an account</Link>
+                        new here? <Link to="/signup">create an account</Link>
                     </p>
                 </div>
             </div>

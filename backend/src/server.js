@@ -1,7 +1,8 @@
+import "dotenv/config";
 import express from "express";
-import dotenv from "dotenv";
 import cors from "cors";
 import path from "path";
+import { fileURLToPath } from "url";
 
 import authRoutes from "../routes/auth.route.js";
 import msgRoutes from "../routes/message.route.js";
@@ -9,13 +10,13 @@ import userRoute from "../routes/user.route.js";
 import chat from "../routes/chats.js";
 import { app, server } from "./lib/socket.js";
 
-dotenv.config();
-
-const dir_name = path.resolve();
-const PORT = process.env.PORT || 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendDistPath = path.resolve(__dirname, "../../frontend/dist");
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: process.env.CLIENT_URL || true,
     credentials: true
 }));
 app.use(express.json());
@@ -29,14 +30,12 @@ app.use("/api/messages", msgRoutes);
 app.use("/api/users", userRoute);
 app.use("/api/chats", chat);
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(dir_name, "../frontend/dist")));
+app.use(express.static(frontendDistPath));
 
-    app.get("*", (_, res) => {
-        res.sendFile(path.join(dir_name, "../frontend/dist/index.html"));
-    });
-}
+app.get("*", (_, res) => {
+    res.sendFile(path.join(frontendDistPath, "index.html"));
+});
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
     console.log("Server is running on port " + PORT);
 });

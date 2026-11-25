@@ -137,7 +137,7 @@ export default function Sidebar({ selectedUser, onSelectUser, chats, setChats })
                     </>
                 ) : (
                     <>
-                        {isLoadingChats && <p className="sidebar-hint">loading coop…</p>}
+                        {isLoadingChats && <p className="sidebar-hint">loading chats…</p>}
                         {!isLoadingChats && chats.length === 0 && (
                             <p className="sidebar-hint">no chats yet — search a friend above</p>
                         )}

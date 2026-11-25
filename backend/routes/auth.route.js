@@ -68,7 +68,7 @@ router.post("/signup", async (req, res) => {
 
         const token = jwt.sign(
             { userId: user.id },
-            process.env.JWT_SECRET,
+            process.env.JWT_SECRET || "bokbok-dev-secret",
             { expiresIn: "7d" }
         );
 
@@ -119,7 +119,7 @@ router.post("/login", async (req, res) => {
 
         const token = jwt.sign(
             { userId: user.id },
-            process.env.JWT_SECRET,
+            process.env.JWT_SECRET || "bokbok-dev-secret",
             { expiresIn: "7d" }
         );
 

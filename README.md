@@ -1,7 +1,8 @@
 # bokbok
 
-A tiny 1:1 direct-message chat app with a retro pixel "coop" theme. Real-time
-messaging over Socket.io, JWT auth, and procedurally generated pixel avatars
+A tiny 1:1 direct-message chat app with a retro pixel chatter theme ("bokbok"
+means talking/chattering in Bengali). Real-time messaging over Socket.io, JWT auth,
+and procedurally generated pixel avatars
 (no photo upload needed — everyone gets a unique little pixel identity based
 on their username).
 

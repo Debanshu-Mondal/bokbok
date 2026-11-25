@@ -24,7 +24,7 @@ export default function MessageInput({ onSend }) {
                 type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                placeholder="peck out a message…"
+                placeholder="say what's on your mind…"
                 maxLength={2000}
             />
             <button type="submit" className="pixel-btn pixel-btn-primary" disabled={!text.trim() || isSending}>

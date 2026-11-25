@@ -3,8 +3,8 @@
 // bokbok user gets a unique identity without needing to upload a photo.
 
 const PALETTE = [
-    ["#E8543A", "#241608"], // comb red / ink
-    ["#FFC53D", "#4A2E1E"], // beak yellow / brown
+    ["#E8543A", "#241608"], // terracotta red / ink
+    ["#FFC53D", "#4A2E1E"], // warm gold / brown
     ["#7EC8E3", "#241608"], // sky blue / ink
     ["#5B8C3A", "#241608"], // grass green / ink
     ["#B968C7", "#241608"], // plum / ink

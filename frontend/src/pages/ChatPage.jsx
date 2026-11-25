@@ -14,7 +14,7 @@ export default function ChatPage() {
                     <span className="pixel-titlebar-dot" />
                     <span className="pixel-titlebar-dot" />
                     <span className="pixel-titlebar-dot" />
-                    <span className="pixel-titlebar-label">bokbok://coop</span>
+                    <span className="pixel-titlebar-label">bokbok://chat</span>
                 </div>
 
                 <div className="chat-window-body">
